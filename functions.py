@@ -23,7 +23,7 @@ from sklearn.metrics import r2_score, f1_score
 from utils import ICE_STRINGS, GROUP_NAMES
 
 
-def chart_cbar(ax, n_classes, chart):
+def chart_cbar(ax, n_classes, chart, cmap='vridis'):
     """
     Create discrete colourbar for plot with the sea ice parameter class names.
 
@@ -35,7 +35,7 @@ def chart_cbar(ax, n_classes, chart):
         The relevant chart.
     """
     arranged = np.arange(0, n_classes)
-    cmap = plt.get_cmap('viridis', n_classes)
+    cmap = plt.get_cmap(cmap, n_classes)
     norm = mpl.colors.BoundaryNorm(arranged - 0.5, cmap.N)  # Get colour boundaries. -0.5 to center ticks for each color.
     arranged = arranged[:-1]  # Discount the mask class.
     cbar = plt.colorbar(mpl.cm.ScalarMappable(norm=norm, cmap=cmap), ticks=arranged, fraction=0.0485, pad=0.049, ax=ax)
