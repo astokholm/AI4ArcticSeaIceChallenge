@@ -35,7 +35,7 @@ def chart_cbar(ax, n_classes, chart, cmap='vridis'):
         The relevant chart.
     """
     arranged = np.arange(0, n_classes)
-    cmap = plt.get_cmap(cmap, n_classes)
+    cmap = plt.get_cmap(cmap, n_classes - 1)
     norm = mpl.colors.BoundaryNorm(arranged - 0.5, cmap.N)  # Get colour boundaries. -0.5 to center ticks for each color.
     arranged = arranged[:-1]  # Discount the mask class.
     cbar = plt.colorbar(mpl.cm.ScalarMappable(norm=norm, cmap=cmap), ticks=arranged, fraction=0.0485, pad=0.049, ax=ax)
