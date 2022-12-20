@@ -82,7 +82,7 @@ SIC_GROUPS = {
 # Stage of Development code to class conversion lookup table.
 SOD_LOOKUP = {
     'sod_partial_idx': [3, 6, 9],  # Partial SIC polygon code index. SA, SB, SC.
-    'threshold': 0.7,  # < 1. Minimum partial percentage SIC of total SIC to select SOD. Otherwise ambiguous polygon.
+    'threshold': 0.65,  # < 1. Minimum partial percentage SIC of total SIC to select SOD. Otherwise ambiguous polygon.
                        # larger than threshold.
     'invalid': -9,  # Value for polygons where the SOD is ambiguous or not filled.
     'water': 0,
@@ -121,7 +121,7 @@ SOD_GROUPS = {
 # Ice floe/form code to class conversion lookup table.
 FLOE_LOOKUP = {
     'floe_partial_idx': [4, 7, 10],  # Partial SIC polygon code index. FA, FB, FC.
-    'threshold': 0.5,  # < 1. Minimum partial concentration to select floe. Otherwise polygon may be ambiguous.
+    'threshold': 0.65,  # < 1. Minimum partial concentration to select floe. Otherwise polygon may be ambiguous.
     'invalid': -9,  # Value for polygons where the floe is ambiguous or not filled.
     'water': 0,
     0: 0,

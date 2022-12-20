@@ -16,6 +16,7 @@ import copy
 
 # -- Third-party modules -- #
 import numpy as np
+import xarray as xr
 
 # -- Proprietary modules -- #
 from utils import CHARTS, SIC_LOOKUP, SOD_LOOKUP, FLOE_LOOKUP, ICE_STRINGS, GROUP_NAMES, ICECHART_NOT_FILLED_VALUE, ICECHART_UNKNOWN, LOOKUP_NAMES
