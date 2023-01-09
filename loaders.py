@@ -207,7 +207,7 @@ class AI4ArcticChallengeTestDataset(Dataset):
         x = torch.cat((torch.from_numpy(scene[self.options['sar_variables']].to_array().values).unsqueeze(0),
                       torch.nn.functional.interpolate(
                           input=torch.from_numpy(scene[self.options['amsrenv_variables']].to_array().values).unsqueeze(0),
-                          size=scene['SIC'].values.shape, 
+                          size=scene['nersc_sar_primary'].values.shape, 
                           mode=self.options['loader_upsampling'])),
                       axis=1)
         
